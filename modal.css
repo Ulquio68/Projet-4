@@ -188,6 +188,14 @@ main {
   margin: 15px auto;
 }
 
+.modal-validé {
+  padding: 15px 8%;
+  margin: 15px auto;
+  height: 500px;
+  border: red 2px solid;
+  display: block;
+}
+
 label {
   font-family: var(--font-default);
   font-size: 17px;
@@ -333,6 +341,19 @@ input[data-error]::after {
   cursor: pointer;
   border: 0;
 }
+
+.btn-submit-fermer {
+  background: #fe142f;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 12px 82px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+
 /* custom select styles */
 .custom-select {
   position: relative;
@@ -527,3 +548,46 @@ footer {
   }
 }
 
+#checkbox_manquant {
+  color: red;
+  font-size: 16px;
+}
+
+#choice_manquant {
+  color: red;
+  font-size: 16px;
+}
+
+#reponse_manquant {
+  color: red;
+  font-size: 16px;
+  border : red 3px solid;
+}
+
+#date_manquant {
+  color: red;
+  font-size: 16px;
+  border : red 3px solid;
+}
+
+#mail_manquant {
+  color: red;
+  font-size: 16px;
+  border : red 3px solid;
+}
+
+#nom_manquant {
+  color: red;
+  font-size: 16px;
+  border : red 3px solid;
+}
+
+#prenom_manquant {
+  color: red;
+  font-size: 16px;
+  border : red 3px solid;
+}
+
+.hidden {
+  display: none;
+}

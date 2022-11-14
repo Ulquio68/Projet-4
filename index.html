@@ -59,9 +59,9 @@
             <form
               name="reserve"
               action="#"
-              id = "formu_close";
+              id = "formulaire";
               method="post"
-              onsubmit="return validate();"
+              onsubmit="return validation_full(e);"
             >
               <div
                 class="formData">
@@ -74,7 +74,7 @@
                   minlength="2"
                   required
                 />
-                <span id ="prenom_manquant"></span><br>
+                <span id ="prenom_manquant" class="hidden">Veuillez entrer 2 caractères ou plus pour le champ du prénom</span><br>
               </div>
               <div
                 class="formData">
@@ -87,7 +87,7 @@
                   minlength="2"
                   required
                 />
-                <span id ="nom_manquant"></span><br>
+                <span id ="nom_manquant" class="hidden">Veuillez entrer 2 caractères ou plus pour le champ du nom</span><br>
               </div>
               <div
                 class="formData">
@@ -99,7 +99,7 @@
                   name="email"
                   required
                 />
-                <span id ="mail_manquant"></span><br>
+                <span id ="mail_manquant" class="hidden">Veuillez entrer votre e-mail</span><br>
               </div>
               <div
                 class="formData">
@@ -111,13 +111,13 @@
                   name="birthdate"
                   required
                 />
-                <span id ="date_manquant"></span><br>
+                <span id ="date_manquant" class="hidden">Vous devez entrer votre date de naissance</span><br>
               </div>
               <div
                 class="formData">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" required>
-                <span id ="reponse_manquant"></span>   
+                <span id ="reponse_manquant" class="hidden">Veuillez entrer un nombre</span>   
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
@@ -188,7 +188,7 @@
                   <span class="checkbox-icon"></span>
                   Portland</label
                 ><br>
-                <span id ="choice_manquant"></span>
+                <span id ="choice_manquant" class="hidden">Vous devez choisir une option</span>
               </div>
 
               <div
@@ -205,7 +205,7 @@
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
                 <br>
-                <span id = "checkbox_manquant"></span>
+                <span id="checkbox_manquant" class="hidden">Vous devez vérifier que vous acceptez les termes et conditions</span>
                 <br>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
@@ -221,6 +221,15 @@
                 value="C'est parti"
               />
             </form>
+            <div class="modal-validé hidden">
+              <p>Merci pour votre inscription !</p>
+              <input
+              class="btn-submit-fermer"
+              type="submit"
+              class="button"
+              value="Fermer"
+            />
+            </div>
           </div>
         </div>
       </div>
