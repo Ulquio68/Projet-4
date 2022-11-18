@@ -192,7 +192,7 @@ main {
   padding: 15px 8%;
   margin: 15px auto;
   height: 500px;
-  border: red 2px solid;
+  padding-top: 200px;
   display: block;
 }
 
@@ -349,6 +349,7 @@ input[data-error]::after {
   border-radius: 7px;
   font-size: 1rem;
   padding: 12px 82px;
+  margin-top: 100px;
   color: #fff;
   cursor: pointer;
   border: 0;
@@ -548,44 +549,9 @@ footer {
   }
 }
 
-#checkbox_manquant {
+#checkbox_manquant, #choice_manquant, #reponse_manquant, #date_manquant, #mail_manquant, #nom_manquant, #prenom_manquant {
   color: red;
-  font-size: 16px;
-}
-
-#choice_manquant {
-  color: red;
-  font-size: 16px;
-}
-
-#reponse_manquant {
-  color: red;
-  font-size: 16px;
-  border : red 3px solid;
-}
-
-#date_manquant {
-  color: red;
-  font-size: 16px;
-  border : red 3px solid;
-}
-
-#mail_manquant {
-  color: red;
-  font-size: 16px;
-  border : red 3px solid;
-}
-
-#nom_manquant {
-  color: red;
-  font-size: 16px;
-  border : red 3px solid;
-}
-
-#prenom_manquant {
-  color: red;
-  font-size: 16px;
-  border : red 3px solid;
+  font-size: 14px;
 }
 
 .hidden {

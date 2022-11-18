@@ -36,8 +36,9 @@ let prenom_v = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-Zéè�
 function test_prenom() {
   let prenom = document.getElementById("first");
 
-  if (prenom.validity.valueMissing) {
+  if (!prenom_v.test(prenom.value)) {
     prenom_m.classList.remove("hidden");
+    prenom.style.border = "red 3px solid";
     return false;
   }
   else {
@@ -54,8 +55,9 @@ let nom_v = /^[a-zA-ZéèîïÉÈÎÏ][a-zéèêàçîï]+([-'\s][a-zA-Zéèîï
 function test_nom() {
   let nom = document.getElementById("last");
 
-  if (nom.validity.valueMissing) {
+  if (!nom_v.test(nom.value)) {
     nom_m.classList.remove("hidden");
+    nom.style.border = "red 3px solid";
     return false;
   }
   else {
@@ -71,8 +73,9 @@ let mail_v = /[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([_\.\-]?[a-zA
 function test_mail() {
   let mail = document.getElementById("email");
 
-  if (mail.validity.valueMissing) {
+  if (!mail_v.test(mail.value)) {
     mail_m.classList.remove("hidden");
+    mail.style.border = "red 3px solid";
     return false;
   }
   else {
@@ -88,8 +91,9 @@ let date_v = /[0-9]/;
 function test_date() {
   let date = document.getElementById("birthdate");
 
-  if (date.validity.valueMissing) {
+  if (!date_v.test(date.value)) {
     date_m.classList.remove("hidden");
+    date.style.border = "red 3px solid";
     return false;
   }
   else {
@@ -105,8 +109,9 @@ let reponse_v = /[0-9]/;
 function test_reponse() {
   let reponse = document.getElementById("quantity");
 
-  if (reponse.validity.valueMissing) {
+  if (!reponse_v.test(reponse.value)) {
     reponse_m.classList.remove("hidden");
+    reponse.style.border = "red 3px solid";
     return false;
   }
   else {
@@ -114,8 +119,6 @@ function test_reponse() {
     return true;
   }
 }
-
-
 
 //choice conditions
 let choice_m = document.getElementById("choice_manquant");
@@ -174,7 +177,7 @@ function test_checkbox () {
 const formulaire = document.getElementById("formulaire");
 const body = document.getElementsByClassName("modal-body");
 formulaire.addEventListener('submit', validation_full);
-let modal_validé = document.getElementsByClassName("modal-validé");
+let modal_validé = document.getElementsByClassName("modal-validé")[0];
 
 function validation_full(e) {
   e.preventDefault();
@@ -193,3 +196,11 @@ function validation_full(e) {
   }
 }
 
+const fermerBtn = document.getElementsByClassName("btn-submit-fermer");
+
+// close modal event
+fermerBtn[0].addEventListener("click", modalEnd);
+
+function modalEnd() {
+  modalbg.style.display = "none";
+}
