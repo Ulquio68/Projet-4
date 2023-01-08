@@ -31,8 +31,28 @@ img {
 }
 
 .topnav {
-  overflow: hidden;
+  
   margin: 3.5%;
+}
+
+@media screen and (max-width: 768px) {
+.topnav {
+padding: 3%;
+position: fixed;
+z-index: 10;
+background-color: white;
+width: 100%;
+margin: 0%;
+}
+
+@media screen and (min-width: 540px) and (max-width: 767px) {
+.topnav {
+    padding: 1.9%;
+  }
+}
+.main {
+  margin-top: 81px;
+}
 }
 .header-logo {
     float: left;
@@ -53,9 +73,9 @@ img {
 }
 
 .topnav a:hover {
-  background-color: #ff0000;
+  background-color: black;
   color: #ffffff;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .topnav a.active {
@@ -73,7 +93,11 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
+    font-size: 150%;
+    color: red;
+    margin-top: -1px;
   }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -97,7 +121,6 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
   }
 } 
 
@@ -182,17 +205,21 @@ main {
   color: #fff;
   padding-top: 10px;
 }
-
+@media screen and (max-width: 768px) {
+.content {margin-top: 81px;}
+}
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+  height: 760px;
+  overflow: scroll;
 }
 
 .modal-validé {
   padding: 15px 8%;
   margin: 15px auto;
-  height: 500px;
-  padding-top: 200px;
+  height: 680px;
+  padding-top: 250px;
   display: block;
 }
 
@@ -346,13 +373,17 @@ input[data-error]::after {
   background: #fe142f;
   display: block;
   margin: 0 auto;
+  margin-top: 380px;
+  margin-bottom: 30px;
   border-radius: 7px;
   font-size: 1rem;
   padding: 12px 82px;
-  margin-top: 100px;
   color: #fff;
   cursor: pointer;
   border: 0;
+}
+@media screen and (max-width: 800px) {
+  .btn-submit-fermer {  margin-top: 360px;}
 }
 
 /* custom select styles */
@@ -435,6 +466,13 @@ input[data-error]::after {
   box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 10px;
 }
+
+@media screen and (min-width: 800px) {
+.hero-section {
+  height: 620px;
+  min-height: 60vh;
+}
+}
 .hero-content {
   padding: 51px 67px;
   grid-column: span 4;
@@ -458,7 +496,7 @@ input[data-error]::after {
   z-index: 1;
 }
 .hero-headline {
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: normal;
   white-space: nowrap;
 }

@@ -43,6 +43,7 @@ function test_prenom() {
   }
   else {
     prenom_m.classList.add("hidden");
+    prenom.style.border = "none";
     return true;
   }
 }
@@ -62,6 +63,7 @@ function test_nom() {
   }
   else {
     nom_m.classList.add("hidden");
+    nom.style.border = "none";
     return true;
   }
 }
@@ -80,6 +82,7 @@ function test_mail() {
   }
   else {
     mail_m.classList.add("hidden");
+    mail.style.border = "none";
     return true;
   }
 }
@@ -98,6 +101,7 @@ function test_date() {
   }
   else {
     date_m.classList.add("hidden");
+    date.style.border = "none";
     return true;
   }
 }
@@ -116,6 +120,7 @@ function test_reponse() {
   }
   else {
     reponse_m.classList.add("hidden");
+    reponse.style.border = "none";
     return true;
   }
 }
@@ -196,9 +201,9 @@ function validation_full(e) {
   }
 }
 
-const fermerBtn = document.getElementsByClassName("btn-submit-fermer");
 
 // close modal event
+const fermerBtn = document.getElementsByClassName("btn-submit-fermer");
 fermerBtn[0].addEventListener("click", modalEnd);
 
 function modalEnd() {
